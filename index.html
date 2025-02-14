@@ -2,19 +2,65 @@
 <html>
   <head>
     <title>Simple Card</title>
-    <style></style>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      #container {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        width: 310px;
+        font-weight: 300;
+      }
+      #container * {
+        margin: 10px;
+      }
+      #container #title {
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 300;
+      }
+      #container p {
+        font-size: 12px;
+      }
+      #container .seperator {
+        width: 30px;
+        border: 0.5px solid black;
+      }
+      #container .seperator + p {
+        line-height: 16px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      #container > #button {
+        padding: 6px 0;
+        text-align: center;
+        border-radius: 30px;
+        background-color: #4184e1;
+        text-transform: uppercase;
+        color: white;
+      }
+      #container > #button + p {
+        line-height: 14px;
+        font-size: 9px;
+        color: rgba(0, 0, 0, 0.4);
+      }
+    </style>
   </head>
   <body>
-    <section>
-      <h1>Built your first chatbot in 10 minutes!</h1>
+    <section id="container">
+      <h1 id="title">Built your first chatbot in 10 minutes!</h1>
+      <div class="seperator"></div>
       <p>
         Have a bot answering questions from customers on your website within 10
-        minutes of signing up for ChatBot
+        minutes of signing up for ChatBot.
       </p>
-      <div>try now &RightArrow;</div>
+      <p id="button">try now &RightArrow;</p>
       <p>
         By clicking try now you create an account and agree to our Terms and
-        Conditions and Privacy Policy
+        Conditions and Privacy Policy.
       </p>
     </section>
   </body>
